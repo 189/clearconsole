@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/189/clearconsole/compare/v1.0.1...v1.1.0) (2021-06-09)
+
+
+### Features
+
+* process.stdout ([4aaacc7](https://github.com/189/clearconsole/commit/4aaacc7a847e4c1b7aa74a1153e74938c723d337))
+
 ## [1.0.1](https://github.com/189/clearconsole/compare/v1.0.0...v1.0.1) (2021-06-09)
 
 
