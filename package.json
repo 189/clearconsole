@@ -1,6 +1,6 @@
 {
-  "name": "clearconsole",
-  "version": "1.0.0",
+  "name": "@btboy/clearconsole",
+  "version": "0.0.0-development",
   "description": "",
   "keywords": [],
   "main": "dist/clearconsole.umd.js",
