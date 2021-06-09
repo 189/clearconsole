@@ -1,6 +1,6 @@
 {
   "name": "clearconsole",
-  "version": "0.0.0",
+  "version": "0.0.0-development",
   "description": "",
   "keywords": [],
   "main": "dist/clearconsole.umd.js",
@@ -12,7 +12,7 @@
   "author": "wangshangwen <wangshangwen>",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/189/clearconsole.git"
   },
   "license": "MIT",
   "engines": {
@@ -26,14 +26,16 @@
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "test:prod": "npm run lint && npm run test -- --no-cache",
-    "deploy-docs": "ts-node --project tsconfig.tools.json gh-pages-publish",
+    "deploy-docs": "ts-node --project tsconfig.tools.json tools/gh-pages-publish",
     "report-coverage": "cat ./coverage/lcov.info | coveralls",
     "commit": "git-cz",
     "semantic-release": "semantic-release",
-    "semantic-release-prepare": "ts-node --project tsconfig.tools.json semantic-release-prepare",
+    "semantic-release-prepare": "ts-node --project tsconfig.tools.json tools/semantic-release-prepare",
     "precommit": "lint-staged",
     "travis-deploy-once": "travis-deploy-once",
-    "example": "ts-node --project tsconfig.tools.json example/index.ts"
+    "example": "ts-node --project tsconfig.tools.json example/index.ts",
+    "prepush": "npm run test:prod && npm run build",
+    "commitmsg": "commitlint -E HUSKY_GIT_PARAMS"
   },
   "lint-staged": {
     "{src,test}/**/*.ts": [
@@ -107,7 +109,7 @@
     "rollup-plugin-node-resolve": "^3.4.0",
     "rollup-plugin-sourcemaps": "^0.4.2",
     "rollup-plugin-typescript2": "^0.18.0",
-    "semantic-release": "^15.9.16",
+    "semantic-release": "^17.4.3",
     "shelljs": "^0.8.3",
     "travis-deploy-once": "^5.0.9",
     "ts-jest": "^23.10.2",
@@ -117,6 +119,8 @@
   },
   "dependencies": {
     "@btboy/eslint-config": "^1.0.11",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/git": "^9.0.0",
     "@types/prompt": "^1.1.0",
     "@types/shelljs": "^0.8.8",
     "@typescript-eslint/eslint-plugin": "^4.26.0",
