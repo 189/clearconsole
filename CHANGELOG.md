@@ -1,3 +1,11 @@
+## [1.1.1](https://github.com/189/clearconsole/compare/v1.1.0...v1.1.1) (2021-06-09)
+
+
+### Bug Fixes
+
+* remove console.log ([aeabcdd](https://github.com/189/clearconsole/commit/aeabcddfafa1919832720f916a34a1c16b693182))
+* remove console.log ([70ce787](https://github.com/189/clearconsole/commit/70ce78785d62f4a53a18ce8b05d2da16421f17e5))
+
 # [1.1.0](https://github.com/189/clearconsole/compare/v1.0.1...v1.1.0) (2021-06-09)
 
 
